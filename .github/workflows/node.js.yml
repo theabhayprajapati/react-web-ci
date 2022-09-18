@@ -28,18 +28,14 @@ jobs:
         run: |
           pwd
           ls -la
-          cd react-web-ci
           npm ci
       - name: Build
         run: |
-          cd react-web-ci
           npm run build
       - name: Test Compoents
         run: |
-          cd react-web-ci
           npm run test
       - name: Start the application
         run: |
-          cd react-web-ci
           npm start &
           npx wait-on --timeout 60000
